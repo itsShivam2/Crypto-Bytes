@@ -34,7 +34,7 @@ function CoinCard(props) {
   const [searchWord, setSearchWord] = useState("");
   const filteredCoins = searchWord
   ? props.coins.filter((coin) =>
-      coin.name.toLowerCase().includes(searchWord)
+      coin.name.toLowerCase().includes(searchWord.toLowerCase())
     )
     : currentCoins;
 
@@ -42,6 +42,7 @@ function CoinCard(props) {
   function searchChangeHandler(event) {
     setSearchWord(event.target.value);
   }
+
   // Search ends
   
   
