@@ -34,7 +34,7 @@ function App() {
 
   const [news, setNews] = useState([]);
   const newsURL =
-    "https://newsapi.org/v2/everything?q=cryptocurrency&sortBy=publishedAt&pageSize=50&apiKey=224520b092094cb88fcd799f70812647";
+  "https://gnews.io/api/v4/search?q=cryptocurrency&apikey=177793fbcc53903724f9af62af266ed6";
 
   useEffect(() => {
     axios

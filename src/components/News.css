@@ -19,8 +19,8 @@
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 10px;
-  background-color: #26272b;
-  /* box-shadow: 0px 0px 4px 4px; */
+  /* background-color: #26272b;
+  box-shadow: 0px 0px 4px 4px; */
   gap: 1rem;
   width: 48%;
   max-width: 800px;
@@ -50,7 +50,7 @@
 
 .source {
   font-style: italic;
-  color: #666;
+  color: #fff;
   font-size: 1.5rem;
   font-weight: 800;
   margin-top: 0.5rem;
@@ -78,6 +78,7 @@
 
 .news-description {
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 
@@ -85,11 +86,11 @@
   font-size: 1rem;
 }
 
-button.glow-on-hover {
+.glow-on-hover {
   display: inline-block;
   vertical-align: middle;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -97,9 +98,14 @@ button.glow-on-hover {
   transition: transform 0.2s, background-color 0.2s;
 }
 
-button.glow-on-hover:hover {
-  background-color: #0056b3;
+.glow-on-hover a{
+  color: #000;
+}
+
+.glow-on-hover:hover {
+  background-color: #9aa3ad;
   transform: scale(1.05);
+  transition: 1s ease;
 }
 
 
@@ -123,7 +129,7 @@ button.glow-on-hover:hover {
 
   .source {
     font-style: italic;
-    color: #666;
+    color: #fff;
     text-align: center;
   }
 
@@ -140,13 +146,14 @@ button.glow-on-hover:hover {
 
   .news-description {
     margin: 10px 0;
+    text-align: justify;
   }
 
-  button.glow-on-hover {
+  .glow-on-hover {
     display: inline-block;
     vertical-align: middle;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -155,9 +162,10 @@ button.glow-on-hover:hover {
     transition: transform 0.2s, background-color 0.2s;
   }
 
-  button.glow-on-hover:hover {
-    background-color: #0056b3;
+  .glow-on-hover:hover {
+    background-color: #9aa3ad;
     transform: scale(1.05);
+    transition: 1s ease;
   }
 }
 

@@ -31,7 +31,7 @@ function News(props) {
           return (
             <div className="news-card">
               <div className="news-image-source">
-                <img className="news-image" src={article.urlToImage} />
+                <img className="news-image" src={article.image} />
                 <div className="source">{article.source.name}</div>
               </div>
               <div className="news-content">
@@ -39,7 +39,7 @@ function News(props) {
                   <h2>{article.title}</h2>
                 </div>
                 <div className="author-date">
-                  <p className="author">Written by : {article.author}</p>
+                  {/* <p className="author">Written by : {article.author}</p> */}
                   <p className="date">Date : {article.publishedAt}</p>
                 </div>
                 <div className="news-description">{article.description}</div>

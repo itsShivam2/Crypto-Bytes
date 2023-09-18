@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #2b2b2b;
+  /* background-color: #2b2b2b; */
+  background-image: url("/src/image/bg.jpg");
   color: white;
 }
 

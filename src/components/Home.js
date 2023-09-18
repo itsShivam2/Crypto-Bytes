@@ -18,6 +18,7 @@ function Home(props) {
         <div className="section-heading">Trending News</div>
 
         <div className="news">
+          {/* <News news={props.news} /> */}
           <News news={props.news} />
         </div>
 
