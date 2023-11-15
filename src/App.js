@@ -21,7 +21,6 @@ function App() {
       .get(url)
       .then((response) => {
         setCoins(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -41,7 +40,6 @@ function App() {
       .get(newsURL)
       .then((response) => {
         setNews(response.data.articles);
-        console.log(response.data.articles);
       })
       .catch((error) => {
         console.log(error);

@@ -5,8 +5,9 @@
 }
 
 .container{
-    /* background-color: #26272b; */
-    background-image: url("/src/image/bg.jpg");
+    background-color: #0f051d;
+    /* background-color: #14161A; */
+    /* background-image: url("/src/image/bg.jpg"); */
     color: #f4f4f4;
 }
 

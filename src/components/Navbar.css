@@ -7,13 +7,16 @@
     z-index: 200;
 }
 
-h1{
+.navbar-heading{
     font-size: 2.5rem;
     margin-bottom: 1rem;
     padding: 2rem;
     text-align: center;
 }
 
-.purple{
-    color: #5900ff;
+.navbar-heading-span{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(25deg, #2600fc, #ff00ea);
 }
