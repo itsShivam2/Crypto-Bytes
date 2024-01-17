@@ -1,6 +1,6 @@
 import React, {useRef} from "react";
 import "./News.css";
-import "./Home.css";
+import "../Home/Home.css";
 import { useState } from "react";
 
 function News(props) {
@@ -14,13 +14,13 @@ function News(props) {
   function paginate(pageNumber) {
     setCurrentPage(pageNumber);
   }
-  console.log(currentNews);
+  // console.log(currentNews);
 
   const pages = [];
   for (let i = 1; i <= Math.ceil(props.news.length / props.newsPerPage); i++) {
     pages.push(i);
   }
-  console.log(currentPage);
+  // console.log(currentPage);
 
   const newsHeadingRef = useRef(null);
 
@@ -56,7 +56,7 @@ function News(props) {
           );
         })}{" "}
       </div>
-      <div class="pagination-container">
+      <div className="pagination-container">
         <>
           {currentPage === 1 ? (
             <a

@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #14161A;
-  /* background-image: url("/src/image/bg.jpg"); */
+  background-color: #14161a;
   color: white;
 }
 
@@ -23,9 +22,8 @@
 .rank {
   margin-top: 1.5rem;
   padding: 0.8rem;
-  /* border-image: linear-gradient(#ff2e0e, #3d23b9) 10; */
   border-image: linear-gradient(25deg, #2600fc, #ff00ea) 10;
-  border-width: 5px;
+  border-width: 2px;
   border-style: solid;
   font-size: 1.2rem;
   font-weight: 700;
@@ -33,28 +31,10 @@
   align-self: center;
 }
 
-.info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 1rem 2rem;
-  margin: 1rem 1.5rem;
-}
-
-.coin-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  text-align: center;
-  font-weight: bolder;
-}
-
 .icon-name-div {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 0.5rem;
   margin-right: 20px;
@@ -79,50 +59,15 @@
   color: red;
 }
 
-.coin-price {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .coin-price-update {
   margin: 1rem;
   padding: 1rem 1.5rem;
 }
 
-.coin-price-update-head {
-  text-align: left;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: "Fahkwang", sans-serif;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Nunito", sans-serif;
-}
-
 .coin-price-update p {
   font-size: 1rem;
+  font-family: Fahkwang;
   text-align: justify;
-}
-
-.stats {
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.left,
-.right {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
 }
 
 .price-trends-table {
@@ -155,7 +100,7 @@
   /* border-image: linear-gradient(#ff2e0e, #3d23b9) 30; */
   border-image: linear-gradient(25deg, #2600fc, #ff00ea) 30;
   border-width: 2px;
-  border-style: solid;
+  border-style: solid;  
   box-shadow: 0px 8px 12px #18191b;
   border-radius: 8px;
   padding: 0.5rem 1rem;
@@ -174,39 +119,16 @@
   font-weight: bold;
 }
 
-.stats {
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
-  align-items: center;
-  /* border: 1px solid; */
-  box-shadow: 0px 8px 12px #18191b;
-  padding: 1.5rem 2rem;
-  margin: 2rem 2rem;
-  flex-wrap: wrap;
-}
-
-.statistics-head {
-  text-align: center;
-}
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
+/* About starts */
 .about {
   margin: 1rem;
   padding: 1rem 1.5rem;
   text-wrap: balance;
   text-align: justify;
+  font-family: Fahkwang;
 }
 
 .about h3 {
-  /* text-align: left; */
   font-size: 2rem;
   font-weight: 900;
 }
@@ -237,6 +159,7 @@
   justify-content: space-between;
   gap: 0.2rem;
 }
+/* About ends */
 
 .trending-coins-container {
   display: flex;
@@ -251,31 +174,16 @@
   font-weight: 900;
   text-transform: uppercase;
   font-family: "Fahkwang", sans-serif;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Nunito", sans-serif;
 }
 
-.color-text-span{
+.color-text-span {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(25deg, #2600fc, #ff00ea);
 }
 
-@media only screen and (max-width: 450px) {
-  .left,
-  .right {
-    text-align: center;
-  }
-}
-
-/* Smaller screens*/
 @media (max-width: 680px) {
-  .info {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .coin-heading {
     display: flex;
     flex-direction: column;
@@ -291,4 +199,178 @@
     display: flex;
     align-items: center;
   }
+
+  .coin-price-update-head,
+  .trending-coins-head{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px){
+  .coin-price-update-head,
+  .trending-coins-head{
+    font-size: 28px;
+  }
+}
+
+/*  */
+
+.coin-name {
+  font-size: 48px;
+  font-family: Fahkwang;
+}
+
+.info-chart-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.info-div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.chart-div {
+  width: 60%;
+}
+
+.icon-name-symbol-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-name-symbol-div h1 {
+  font-size: 36px;
+  font-family: Fahkwang;
+  font-weight: bold;
+}
+
+.icon-name-symbol-div span {
+  font-family: Fahkwang;
+  color: #14ffec;
+  background-color: #14ffec40;
+  padding: 0.2rem 0.8rem;
+}
+
+.price-24h-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.price-24h-head-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistics-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistics-left-div,
+.statistics-right-div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statistics-left-div {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.statistics-right-div {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.statistics-head {
+  color: #808080;
+  font-size: 16px;
+  font-family: Fahkwang;
+}
+
+.statistics-head-red,
+.statistics-head-green {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.coin-price{
+  text-align: left;
+}
+
+.statistics-data {
+  font-size: 16px;
+  font-family: Fahkwang;
+}
+
+@media only screen and (max-width: 1020px) {
+  .info-chart-div {
+    flex-direction: column;
+  }
+
+  .info-div,
+  .chart-div {
+    width: 100%;
+  }
+
+  .info-div{
+    margin-bottom: 2rem;
+  }
+}
+
+.days-btns-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.day-btn{
+  padding: 0.4rem 3rem;
+  font-size: 14px;
+  font-family: 'Fahkwang';
+  font-weight: 900;
+  background-color: #ffff;
+}
+
+.day-btn:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 560px){
+  .day-btn{
+    padding: 0.4rem 2rem;
+  }
+}
+
+@media (max-width: 450px){
+  .day-btn{
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 410px){
+.icon-name-symbol-div h1{
+  font-size: 28px;
+}
 }

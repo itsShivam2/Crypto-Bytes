@@ -1,9 +1,9 @@
 import React from "react";
-import Coin from "../routes/Coin";
+import Coin from "../../Pages/Coin";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./CoinCard.css";
-import Carousel from "./Carousel";
+import Carousel from "../Carousel/Carousel";
 
 function CoinCard(props) {
   //For Pagination starts
@@ -16,7 +16,7 @@ function CoinCard(props) {
   function paginate(pageNumber) {
     setCurrentPage(pageNumber);
   }
-  console.log(currentCoins);
+  // console.log(currentCoins);
 
   const pages = [];
   for (
@@ -26,9 +26,9 @@ function CoinCard(props) {
   ) {
     pages.push(i);
   }
-  console.log(currentPage);
+  // console.log(currentPage);
 
-  //For Pagination ends
+  //Pagination ends
 
   // Search starts
   const [searchWord, setSearchWord] = useState("");
@@ -41,13 +41,6 @@ function CoinCard(props) {
   function searchChangeHandler(event) {
     setSearchWord(event.target.value);
   }
-
-  // Search ends
-
-  //Could have written like this in the input field itself
-  // onChange={(event) => {
-  //   setSearchWord(event.target.value);
-  // }}
 
   const navigate = useNavigate();
 
@@ -112,9 +105,6 @@ function CoinCard(props) {
                 <td className="price-data-right">
                   ₹{coin.current_price.toLocaleString("en-IN")}
                 </td>
-                {/* <td className="market-cap-data-right">
-                  ₹{coin.market_cap.toLocaleString("en-IN")}
-                </td> */}
                 <td className="market-cap-data-right">
                   ₹ {coin.market_cap.toString().slice(0, -6)}M
                 </td>
@@ -124,7 +114,7 @@ function CoinCard(props) {
         </tbody>
       </table>
 
-      <div class="pagination-container">
+      <div className="pagination-container">
         <>
           {currentPage === 1 ? (
             <a
@@ -177,79 +167,6 @@ function CoinCard(props) {
           )}
         </>
       </div>
-
-      {/*  */}
-      {/* <table aria-label="simple table">
-        <thead style={{ backgroundColor: "#EEBC1D" }}>
-          <tr>
-            {["Coin", "Price", "24h Change", "Market Cap"].map((head) => (
-              <td
-                style={{
-                  color: "black",
-                  fontWeight: "700",
-                  fontFamily: "Montserrat",
-                }}
-                key={head}
-                align={head === "Coin" ? "" : "right"}
-              >
-                {head}
-              </td>
-            ))}
-          </tr>
-        </thead>
-
-        <tbody>
-          {filteredCoins.map((row) => {
-            const profit = row.price_change_percentage_24h > 0;
-            return (
-              <tr className="" key={row.name}>
-                <td
-                  component="th"
-                  scope="row"
-                  style={{
-                    display: "flex",
-                    gap: 15,
-                  }}
-                >
-                  <img
-                    src={row?.image}
-                    alt={row.name}
-                    height="50"
-                    style={{ marginBottom: 10 }}
-                  />
-                  <div style={{ display: "flex", flexDirection: "column" }}>
-                    <span
-                      style={{
-                        textTransform: "uppercase",
-                        fontSize: 22,
-                      }}
-                    >
-                      {row.symbol}
-                    </span>
-                    <span style={{ color: "darkgrey" }}>{row.name}</span>
-                  </div>
-                </td>
-                <td align="right">₹ {row.current_price.toFixed(2)}</td>
-                <td
-                  align="right"
-                  style={{
-                    color: profit > 0 ? "rgb(14, 203, 129)" : "red",
-                    fontWeight: 500,
-                  }}
-                >
-                  {profit && "+"}
-                  {row.price_change_percentage_24h.toFixed(2)}%
-                </td>
-                <td align="right">
-                  ₹ {row.market_cap.toString().slice(0, -6)}M
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table> */}
-
-      {/*  */}
     </div>
   );
 }

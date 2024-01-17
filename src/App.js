@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Coin from "./routes/Coin";
-import News from "./components/News";
-import Footer from "./components/Footer";
+import Home from "./components/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import Coin from "./Pages/Coin";
+import News from "./components/News/News";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 

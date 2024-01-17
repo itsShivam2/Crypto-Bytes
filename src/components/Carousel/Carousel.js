@@ -71,16 +71,7 @@ function Carousel() {
     },
   };
 
-  return loading ? (
-    <div className="loading-container">
-      <ReactLoading
-        type="spinningBubbles"
-        color="white"
-        height={"20%"}
-        width={"20%"}
-      />
-    </div>
-  ) : (
+    return (
     <div className="carousel">
       <AliceCarousel
         mouseTracking

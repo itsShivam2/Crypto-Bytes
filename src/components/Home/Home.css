@@ -75,7 +75,6 @@
   font-weight: 700;
 }
 
-/* Smaller screens */
 @media (max-width: 680px) {
   .news {
     display: flex;

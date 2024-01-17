@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CoinCard from "./CoinCard";
+import CoinCard from "../CoinCard/CoinCard";
 import "./Home.css";
-import News from "./News";
+import News from "../News/News";
 import axios from "axios";
 
 function Home(props) {
